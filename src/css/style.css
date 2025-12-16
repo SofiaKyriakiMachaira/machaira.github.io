@@ -1,0 +1,226 @@
+:root {
+    --color-primary-light: #324a6dd9;
+    --color-primary: #324A6D;
+}
+
+html {
+    font-size: 100%;
+    transition: 0.25s ease-in-out;
+}
+
+main {
+    margin-bottom: 3rem;
+    width: 50%; 
+}
+
+    @media only screen and (max-width: 75em) {
+        html {
+            font-size: 95%; }
+        main {
+                margin-bottom: 3rem;
+                width: 100%; } 
+    }
+    @media only screen and (max-width: 56.25em) {
+        html {
+            font-size: 85%; } 
+        main {
+                margin-bottom: 3rem;
+                width: 100%; }
+    }
+    @media only screen and (min-width: 112.5em) {
+        html {
+            font-size: 112.5%; } 
+        main { margin-bottom: 3rem;
+                width: 50%; }
+    }
+  
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: white; 
+    box-sizing: border-box;
+    padding-left: 2rem;
+    padding-right: 2rem; 
+    background-image: linear-gradient(
+        to right bottom,
+        var(--color-primary-light),
+        var(--color-primary));
+}
+    @media only screen and (max-width: 56.25em) {
+      body {
+        padding: 0; } 
+    }
+
+.header {
+    display: flex;
+    flex-wrap: nowrap;
+    -ms-flex-item-align: center;
+    position: relative;
+}
+
+.hover_available {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+}
+
+.hover_available:hover{
+    text-shadow: 2px 2px 2px darkgray;
+    cursor: pointer;
+}
+
+.header_button {
+    float: right;
+    right: 0;
+    align-self: center;
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    border-radius: 20%;
+}
+
+.section_about {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 6rem;
+    font-size: 1.5rem;
+}
+
+#resume_icon, #language_icon {
+    align-self: center;
+    font-size: 200%;
+}
+
+.about_div {
+    margin-top: -1.2rem;
+}
+
+@media only screen and (max-width: 75em) {
+    .about_div {
+        margin-top: -2rem;
+    }
+}
+
+.contact_icon {
+    font-size: 0.9rem !important;
+    margin: 0.2rem;
+}
+
+.photo_div {
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right bottom, white, transparent);
+    border-style: none;
+    border-radius: 10%;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.photo {
+    height: 7rem;
+    margin-top: -0.7rem;
+}
+
+.contact_information {
+    font-size: 0.8rem;
+    display: flex; 
+    flex-wrap: nowrap;
+}
+
+.section_title {
+    display: flex; 
+    flex-wrap: nowrap;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.section_icon {
+    padding-top: 0.2rem; 
+    font-size: 1.2rem !important; 
+    margin-right: 0.2rem;
+}
+
+
+.collapsible {
+    cursor: pointer;
+    font-size: 100%;
+    background-color: transparent;
+    border-style: none;
+    border-radius: 5px;
+    text-align: left;
+    outline: none;
+    width: 100%;
+    padding: 0;
+    color:white;
+}
+
+.list_item {
+    padding: 0.2rem 0.5rem;
+    transition: 0.25s ease-in-out;
+}
+
+.collapsible > .list_item::before {
+    content: '+';
+    float: right;
+    font-weight: bold;
+    transition: content 0.25s ease-in-out;
+    transition: color 0.2s ease-in;
+}
+
+
+.collapsible:hover > .list_item {
+    background-color: rgba(0, 0, 0, 0.110);
+    border-radius: 5px;
+}
+
+.active > .list_item {
+    background-color: rgba(0, 0, 0, 0.250);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.active > .list_item::before  {
+    
+    transition: content 0.25s ease-in-out;
+    content: '-';
+    float: right;
+    font-weight: bold;
+}
+
+.collapsible_period {
+    float:right; 
+    margin-right: 0.4rem;
+}
+
+
+.not_collapsible_period {
+    float:right; 
+    margin-right: 1rem;
+}
+
+.details {
+    display: none;
+    font-size: 85%;
+    top: 0;
+    color:white;
+    margin: 0 0.5rem;
+    width: 100%;
+}
+
+.footer {
+    margin-top: 1rem;
+    margin-left: -2.5rem;
+    width: 110vw;
+    background-image: linear-gradient(to right bottom, #324A6D 0%, lightgray 360%);
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+
+.copyright {
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding-left: 2rem;
+}
